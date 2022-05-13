@@ -30,6 +30,9 @@ class MenuFragment : Fragment() {
             previousArrow.setOnClickListener {
                 navigate(MenuFragment())
             }
+            profileButton.setOnClickListener {
+                navigate(ProfilePageCl())
+            }
             playerButton.setOnClickListener {
                 navigate(AudioPlayerCl())
             }
