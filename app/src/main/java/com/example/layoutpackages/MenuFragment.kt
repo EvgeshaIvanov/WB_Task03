@@ -36,6 +36,9 @@ class MenuFragment : Fragment() {
             playerButton.setOnClickListener {
                 navigate(AudioPlayerCl())
             }
+            calculatorButton.setOnClickListener {
+                navigate(CalculatorCL())
+            }
         }
     }
     private fun navigate (fragment: Fragment) {
