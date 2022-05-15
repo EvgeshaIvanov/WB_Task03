@@ -10,10 +10,10 @@
         android:id="@+id/calculate_numbers"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:text="789+56"
         android:textColor="@color/black"
-        android:textSize="32sp"
+        android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="@id/content_end"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,10 +23,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="64dp"
         android:text="845"
-        android:textColor="@color/black"
-        android:textSize="18sp"
+        android:textColor="#9e9e9e"
+        android:textSize="26sp"
+        app:layout_constraintTop_toBottomOf="@id/calculate_numbers"
         app:layout_constraintEnd_toEndOf="@id/content_end"
-        app:layout_constraintTop_toBottomOf="@id/calculate_numbers" />
+        app:layout_constraintBottom_toBottomOf="@id/section_barrier" />
 
     <androidx.constraintlayout.widget.Barrier
         android:id="@+id/section_barrier"
@@ -38,39 +39,41 @@
 
     <ImageView
         android:id="@+id/timer_button"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/ic_baseline_timer_24"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:src="@drawable/ic_baseline_access_time_grey"
         app:layout_constraintStart_toStartOf="@id/content_start"
         app:layout_constraintTop_toBottomOf="@id/section_barrier" />
 
     <ImageView
         android:id="@+id/bar_chart_button"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         android:src="@drawable/ic_baseline_bar_chart"
         app:layout_constraintStart_toEndOf="@id/timer_button"
         app:layout_constraintTop_toBottomOf="@id/section_barrier" />
 
     <ImageView
         android:id="@+id/functions_button"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         android:src="@drawable/ic_baseline_functions_24"
         app:layout_constraintStart_toEndOf="@id/bar_chart_button"
         app:layout_constraintTop_toBottomOf="@id/section_barrier" />
 
     <ImageView
         android:id="@+id/delete_numbers_button"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginTop="16dp"
-        android:src="@drawable/ic_baseline_clear_24"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_baseline_backspace_24"
         app:layout_constraintEnd_toEndOf="@id/content_end"
         app:layout_constraintTop_toBottomOf="@id/section_barrier" />
 
@@ -82,12 +85,21 @@
         app:barrierDirection="bottom"
         app:constraint_referenced_ids="timer_button,bar_chart_button, functions_button, delete_numbers_button" />
 
+    <ImageView
+        android:id="@+id/image_line"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="18dp"
+        android:background="@color/dark_grey"
+        app:layout_constraintEnd_toEndOf="@+id/content_end"
+        app:layout_constraintStart_toStartOf="@id/content_start"
+        app:layout_constraintTop_toBottomOf="@id/section_tools_barrier" />
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/content_start"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="vertical"
-        app:layout_constraintGuide_end="377dp" />
+        app:layout_constraintGuide_begin="16dp" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/content_end"
@@ -101,56 +113,56 @@
         android:id="@+id/delete_one_button"
         android:layout_width="78dp"
         android:layout_height="78dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="18dp"
         android:background="@drawable/round_button_grey"
         android:text="C"
         android:textAllCaps="false"
         android:textColor="@color/red"
         android:textSize="34sp"
         app:layout_constraintStart_toStartOf="@id/content_start"
-        app:layout_constraintTop_toBottomOf="@id/section_tools_barrier" />
+        app:layout_constraintTop_toBottomOf="@id/image_line" />
 
     <Button
         android:id="@+id/module_button"
         android:layout_width="78dp"
         android:layout_height="78dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="18dp"
         android:background="@drawable/round_button_grey"
         android:text="( )"
         android:textAllCaps="false"
         android:textColor="@color/green"
         android:textSize="34sp"
         app:layout_constraintStart_toEndOf="@id/delete_one_button"
-        app:layout_constraintTop_toBottomOf="@id/section_tools_barrier" />
+        app:layout_constraintTop_toBottomOf="@id/image_line" />
 
     <Button
         android:id="@+id/percent_button"
         android:layout_width="78dp"
         android:layout_height="78dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="18dp"
         android:background="@drawable/round_button_grey"
         android:text="%"
         android:textAllCaps="false"
         android:textColor="@color/green"
         android:textSize="34sp"
         app:layout_constraintStart_toEndOf="@id/module_button"
-        app:layout_constraintTop_toBottomOf="@id/section_tools_barrier" />
+        app:layout_constraintTop_toBottomOf="@id/image_line" />
 
     <Button
         android:id="@+id/split_button"
         android:layout_width="78dp"
         android:layout_height="78dp"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="18dp"
         android:background="@drawable/round_button_grey"
-        android:text="/"
+        android:text="÷"
         android:textAllCaps="false"
         android:textColor="@color/green"
-        android:textSize="34sp"
+        android:textSize="48sp"
         app:layout_constraintStart_toEndOf="@id/percent_button"
-        app:layout_constraintTop_toBottomOf="@id/section_tools_barrier" />
+        app:layout_constraintTop_toBottomOf="@id/image_line" />
 
     <Button
         android:id="@+id/seven_button"
@@ -200,10 +212,10 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/round_button_grey"
-        android:text="X"
+        android:text="×"
         android:textAllCaps="false"
         android:textColor="@color/green"
-        android:textSize="34sp"
+        android:textSize="48sp"
         app:layout_constraintStart_toEndOf="@id/nine_button"
         app:layout_constraintTop_toBottomOf="@id/split_button" />
 
@@ -258,7 +270,7 @@
         android:text="-"
         android:textAllCaps="false"
         android:textColor="@color/green"
-        android:textSize="34sp"
+        android:textSize="48sp"
         app:layout_constraintStart_toEndOf="@id/six_button"
         app:layout_constraintTop_toBottomOf="@id/multiply_button" />
 

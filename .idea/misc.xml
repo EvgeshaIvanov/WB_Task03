@@ -3,25 +3,33 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/drawable/avatar_1.xml" value="0.2285" />
+        <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/drawable/custom_input.xml" value="0.2285" />
         <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/drawable/ic_baseline_airplay_24.xml" value="0.2285" />
         <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/drawable/ic_baseline_arrow_back.xml" value="0.2285" />
         <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/drawable/ic_baseline_favorite.xml" value="0.2285" />
         <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/drawable/ic_baseline_favorite_on.xml" value="0.2285" />
+        <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/drawable/ic_baseline_high_quality_24.xml" value="0.2285" />
         <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/drawable/ic_baseline_keyboard_arrow_down.xml" value="0.2285" />
         <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/drawable/ic_baseline_menu_24.xml" value="0.2285" />
         <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/drawable/ic_baseline_more_vert.xml" value="0.2285" />
         <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/drawable/ic_baseline_play_circle_filled_24.xml" value="0.2285" />
         <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/drawable/ic_baseline_repeat_24.xml" value="0.2285" />
         <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/drawable/ic_baseline_share.xml" value="0.2285" />
+        <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/drawable/ic_baseline_timer_24.xml" value="0.2285" />
+        <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/drawable/ic_baseline_timer_grey.xml" value="0.2285" />
         <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/drawable/round_button.xml" value="0.2285" />
         <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/drawable/round_button_green.xml" value="0.2285" />
         <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/drawable/round_button_grey.xml" value="0.2285" />
+        <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/layout-v28/fragment_telegramm_profile_c_l.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/layout/fragment_audio_player_cl.xml" value="0.4817073170731707" />
         <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/layout/fragment_authorization.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/layout/fragment_calculator_c_l.xml" value="0.33" />
+        <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/layout/fragment_facebook_c_l.xml" value="0.30085470085470084" />
         <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/layout/fragment_menu.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/layout/fragment_profile_page_cl.xml" value="0.5" />
+        <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/layout/fragment_telegramm_profile_c_l.xml" value="0.5" />
       </map>
     </option>
   </component>

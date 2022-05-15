@@ -6,26 +6,23 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
-import com.example.layoutpackages.databinding.FragmentAudioPlayerClBinding
 
 
-class AudioPlayerCl : Fragment() {
-    lateinit var binding: FragmentAudioPlayerClBinding
+class FacebookCL : Fragment() {
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentAudioPlayerClBinding.inflate(inflater, container, false)
-        return binding.root
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_facebook_c_l, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            activity?.window?.statusBarColor = activity?.getColor(R.color.grey_green)!!
+            activity?.window?.statusBarColor = activity?.getColor(R.color.facebook_blue)!!
         }
 
     }
-
 }

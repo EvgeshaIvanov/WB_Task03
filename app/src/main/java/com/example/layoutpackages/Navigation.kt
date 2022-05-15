@@ -5,8 +5,7 @@ import androidx.fragment.app.FragmentManager
 
 interface Navigation {
 
-    fun navigate(fragment: Fragment){
+  fun goHome()
 
-    }
 
 }
