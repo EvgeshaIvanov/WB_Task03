@@ -20,7 +20,7 @@ class TelegrammProfileCL : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentTelegrammProfileCLBinding.inflate(inflater, container, false)
         return binding.root
 
@@ -38,10 +38,10 @@ class TelegrammProfileCL : Fragment() {
             }
         }
         requireActivity().onBackPressedDispatcher.addCallback(callback)
-        binding.backButton.setOnClickListener { navigate(FirstMenuFragment()) }
+        binding.backButton.setOnClickListener { launchFragment(FirstMenuFragment()) }
     }
 
-    private fun navigate(fragment: Fragment) {
+    private fun launchFragment(fragment: Fragment) {
         parentFragmentManager.beginTransaction().replace(R.id.containerView, fragment).commit()
     }
 }
