@@ -1,143 +1,135 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".layout.constraint.TelegrammProfileCL">
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/content_start"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintGuide_begin="16dp" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/content_end"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="16dp" />
-
-    <ImageView
-        android:id="@+id/background_header"
-        android:layout_width="match_parent"
-        android:layout_height="130dp"
-        android:background="#5a8fbb"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/back_button"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginStart="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_baseline_arrow_back" />
+    android:orientation="vertical"
+    tools:context=".layout.linear.TelegrammProfile">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:cardCornerRadius="100dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/back_button">
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardBackgroundColor="@color/telegramm_color"
+        app:cardElevation="0dp">
 
-        <ImageView
-            android:id="@+id/imageView"
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:src="@drawable/avatar_1" />
+            android:orientation="horizontal">
+
+            <ImageView
+                android:clickable="true"
+                android:focusable="true"
+                android:id="@+id/back_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="16dp"
+                android:src="@drawable/ic_baseline_arrow_back" />
+
+            <ImageView
+                android:id="@+id/apps"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="220dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_baseline_apps" />
+
+            <ImageView
+                android:id="@+id/search_side_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_baseline_search" />
+
+            <ImageView
+                android:id="@+id/more_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/ic_baseline_more_vert_white" />
+
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <ImageView
-        android:id="@+id/more_button"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="16dp"
-        android:src="@drawable/ic_baseline_more_vert_white"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:cardBackgroundColor="@color/telegramm_color"
+        app:cardElevation="0dp">
 
-    <ImageView
-        android:id="@+id/search_side_button"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="16dp"
-        android:src="@drawable/ic_baseline_search"
-        app:layout_constraintEnd_toStartOf="@+id/more_button"
-        app:layout_constraintTop_toTopOf="@+id/more_button" />
+        <androidx.cardview.widget.CardView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:cardCornerRadius="100dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/back_button">
 
-    <ImageView
-        android:id="@+id/apps"
-        android:layout_width="30dp"
-        android:layout_height="30dp"
-        android:layout_marginEnd="16dp"
-        android:src="@drawable/ic_baseline_apps"
-        app:layout_constraintEnd_toStartOf="@id/search_side_button"
-        app:layout_constraintTop_toTopOf="@id/search_side_button" />
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/avatar_1" />
 
-    <TextView
-        android:id="@+id/full_user_name"
-        android:layout_width="wrap_content"
-        android:textStyle="bold"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="30dp"
-        android:text="@string/user_name_text"
-        android:textColor="@color/white"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toBottomOf="@id/background_header"
-        app:layout_constraintEnd_toEndOf="@id/background_header"
-        app:layout_constraintStart_toStartOf="@id/background_header"
-        app:layout_constraintTop_toTopOf="@id/background_header" />
+        </androidx.cardview.widget.CardView>
 
-    <TextView
-        android:id="@+id/status_user"
-        android:layout_width="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_height="wrap_content"
-        android:text="@string/status_user_text"
-        android:textColor="#c0edff"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="@id/background_header"
-        app:layout_constraintStart_toStartOf="@+id/full_user_name"
-        app:layout_constraintTop_toTopOf="@id/full_user_name" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="vertical">
 
-    <ImageButton
-        android:id="@+id/add_photo_button"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="16dp"
-        android:background="@drawable/round_button"
-        android:src="@drawable/ic_baseline_add_a_photo_24"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="SpeakableTextPresentCheck" />
+            <TextView
+                android:id="@+id/full_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/user_name_text"
+                android:textColor="@color/white"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/status_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="@string/status_user_text"
+                android:textColor="#c0edff"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/add_photo_button"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="end"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@drawable/round_button"
+            android:src="@drawable/ic_baseline_add_a_photo_24"
+            tools:ignore="SpeakableTextPresentCheck" />
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/info_account"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/account_text"
         android:textColor="#7090a7"
         android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/content_start"
-        app:layout_constraintTop_toBottomOf="@id/background_header" />
+        android:textStyle="bold" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/phone_info_point"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="@id/content_end"
         app:layout_constraintStart_toStartOf="@id/content_start"
@@ -169,11 +161,12 @@
             android:background="@color/dark_grey" />
     </androidx.cardview.widget.CardView>
 
-
     <androidx.cardview.widget.CardView
         android:id="@+id/nickname_point"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="@id/content_end"
         app:layout_constraintStart_toStartOf="@id/content_start"
@@ -205,11 +198,12 @@
             android:background="@color/dark_grey" />
     </androidx.cardview.widget.CardView>
 
-
     <androidx.cardview.widget.CardView
         android:id="@+id/status_point"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="@id/nickname_point"
         app:layout_constraintStart_toStartOf="@id/content_start"
@@ -234,7 +228,6 @@
             android:textSize="14sp" />
     </androidx.cardview.widget.CardView>
 
-
     <ImageView
         android:id="@+id/grey_border"
         android:layout_width="match_parent"
@@ -248,31 +241,31 @@
         android:id="@+id/settings"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:text="@string/settings_text"
         android:textColor="#7090a7"
         android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="@id/content_start"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/grey_border" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/notification_and_sounds_point"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:clickable="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
         android:focusable="true"
         app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="@id/content_end"
         app:layout_constraintStart_toStartOf="@id/content_start"
-        app:layout_constraintTop_toBottomOf="@id/grey_border"
-        tools:ignore="TouchTargetSizeCheck">
+        app:layout_constraintTop_toBottomOf="@id/grey_border">
 
         <ImageView
             android:id="@+id/notification_button"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
             android:src="@drawable/ic_baseline_notifications_none" />
 
         <TextView
@@ -280,7 +273,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="48dp"
-
             android:layout_marginBottom="16dp"
             android:text="@string/notifications_and_sounds_text"
             android:textColor="@color/black"
@@ -289,9 +281,10 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/privacy_security_point"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="@id/content_end"
         app:layout_constraintStart_toStartOf="@id/content_start"
@@ -323,9 +316,10 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/data_storage_point"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="@id/content_end"
         app:layout_constraintStart_toStartOf="@id/content_start"
@@ -345,14 +339,15 @@
             android:layout_marginBottom="16dp"
             android:text="@string/data_and_storage_text"
             android:textColor="@color/black"
-            android:textSize="18sp"/>
+            android:textSize="18sp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
         android:id="@+id/chat_settings_point"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="@id/content_end"
         app:layout_constraintStart_toStartOf="@id/content_start"
@@ -383,9 +378,10 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/folders_point"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="@id/content_end"
         app:layout_constraintStart_toStartOf="@id/content_start"
@@ -410,9 +406,10 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/devices_point"
-        android:layout_width="0dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="8dp"
         app:cardElevation="0dp"
         app:layout_constraintEnd_toEndOf="@id/content_end"
         app:layout_constraintStart_toStartOf="@id/content_start"
@@ -439,7 +436,7 @@
             android:layout_height="1dp"
             android:layout_gravity="bottom"
             android:background="@color/dark_grey" />
+
     </androidx.cardview.widget.CardView>
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.appcompat.widget.LinearLayoutCompat>

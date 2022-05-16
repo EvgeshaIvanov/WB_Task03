@@ -2,12 +2,11 @@ package com.example.layoutpackages
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.activity.OnBackPressedCallback
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.example.layoutpackages.databinding.ActivityMainBinding
+import com.example.layoutpackages.layout.constraint.FirstMenuFragment
 
-class MainActivity : AppCompatActivity(), Navigation{
+class MainActivity : AppCompatActivity(){
 
     private lateinit var binding: ActivityMainBinding
 
@@ -15,13 +14,8 @@ class MainActivity : AppCompatActivity(), Navigation{
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        supportFragmentManager.beginTransaction().replace(R.id.containerView, MenuFragment()).commit()
+
+        supportFragmentManager.beginTransaction().replace(R.id.containerView, FirstMenuFragment()).commit()
     }
-
-    override fun goHome() {
-
-        supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
-    }
-
 
 }

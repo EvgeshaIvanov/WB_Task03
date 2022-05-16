@@ -1,4 +1,4 @@
-package com.example.layoutpackages
+package com.example.layoutpackages.layout.linear
 
 import android.os.Build
 import android.os.Bundle
@@ -6,47 +6,50 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.activity.OnBackPressedCallback
-import com.example.layoutpackages.databinding.FragmentMenuBinding
+import com.example.layoutpackages.layout.constraint.FirstMenuFragment
+import com.example.layoutpackages.R
+import com.example.layoutpackages.databinding.FragmentSecondMenuBinding
 
 
-class MenuFragment : Fragment() {
-    private lateinit var binding: FragmentMenuBinding
+class SecondMenuFragment : Fragment() {
+
+    private lateinit var binding: FragmentSecondMenuBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        binding = FragmentMenuBinding.inflate(inflater, container, false)
+    ): View? {
+        binding = FragmentSecondMenuBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            activity?.window?.statusBarColor = activity?.getColor(R.color.black)!!
+            activity?.window?.statusBarColor = activity?.getColor(R.color.toolbar_color_menu)!!
         }
         binding.apply {
-            authorizationButton.setOnClickListener {
-                navigate(FacebookCL())
+            nextMenu.setOnClickListener {
+                navigate(FirstMenuFragment())
             }
-            nextArrow.setOnClickListener {
-                navigate(MenuFragment())
-            }
-            previousArrow.setOnClickListener {
-                navigate(MenuFragment())
+            previousMenu.setOnClickListener {
+                navigate(FirstMenuFragment())
             }
             profileButton.setOnClickListener {
-                navigate(TelegrammProfileCL())
+                navigate(TelegrammProfile())
             }
             playerButton.setOnClickListener {
-                navigate(AudioPlayerCL())
+                navigate(AudioPlayer())
             }
             calculatorButton.setOnClickListener {
-                navigate(CalculatorCL())
+                navigate(Calculator())
             }
+            authorizationButton.setOnClickListener {
+                navigate(Facebook())
+            }
+
         }
     }
-
 
     private fun navigate (fragment: Fragment) {
         parentFragmentManager.beginTransaction().replace(R.id.containerView, fragment).commit()

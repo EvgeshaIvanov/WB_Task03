@@ -14,5 +14,8 @@
     <color name="facebook_blue">#1779f5</color>
     <color name="telegramm_color">#5b8fbb</color>
     <color name="red">#C30000</color>
+    <color name="background_audio_player">#758c84</color>
+    <color name="background_color_menu">#4b6584</color>
+    <color name="toolbar_color_menu">#1e90ff</color>
 
 </resources>

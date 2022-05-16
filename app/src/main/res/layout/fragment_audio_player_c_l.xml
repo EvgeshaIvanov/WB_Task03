@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#758c84"
-    tools:context=".AudioPlayerCL">
+    android:background="@color/background_audio_player"
+    tools:context=".layout.constraint.AudioPlayerCL">
 
 
     <ImageView
@@ -50,7 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="14dp"
         android:layout_marginBottom="16dp"
-        android:text="Альянс"
+        android:text="@string/artist_song_text"
         android:textColor="#a9bcb6"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/seekBar"
