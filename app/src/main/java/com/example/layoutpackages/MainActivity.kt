@@ -1,10 +1,12 @@
 package com.example.layoutpackages
 
-import androidx.appcompat.app.AppCompatActivity
+
 import android.os.Bundle
-import androidx.fragment.app.FragmentManager
+import androidx.appcompat.app.AppCompatActivity
 import com.example.layoutpackages.databinding.ActivityMainBinding
 import com.example.layoutpackages.layout.constraint.FirstMenuFragment
+
+
 
 class MainActivity : AppCompatActivity(){
 
@@ -16,6 +18,9 @@ class MainActivity : AppCompatActivity(){
         setContentView(binding.root)
 
         supportFragmentManager.beginTransaction().replace(R.id.containerView, FirstMenuFragment()).commit()
+
+
     }
+
 
 }

@@ -37,6 +37,10 @@
         <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/layout/fragment_profile_page_cl.xml" value="0.5" />
         <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/layout/fragment_telegramm_profile.xml" value="0.5" />
         <entry key="..\:/Users/most1/AndroidStudioProjects/LayoutPackages/app/src/main/res/layout/fragment_telegramm_profile_c_l.xml" value="0.33" />
+        <entry key="..\:/Users/most1/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/activity_list_item.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/most1/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/list_content.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/most1/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/simple_list_item_1.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/most1/AppData/Local/Android/Sdk/platforms/android-32/data/res/layout/test_list_item.xml" value="0.36666666666666664" />
       </map>
     </option>
   </component>
