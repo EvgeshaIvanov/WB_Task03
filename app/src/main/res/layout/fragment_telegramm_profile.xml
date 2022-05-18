@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,435 +8,410 @@
     android:orientation="vertical"
     tools:context=".layout.linear.TelegrammProfile">
 
-    <androidx.cardview.widget.CardView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        app:cardBackgroundColor="@color/telegramm_color"
-        app:cardElevation="0dp">
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <ImageView
-                android:clickable="true"
-                android:focusable="true"
-                android:id="@+id/back_button"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="16dp"
-                android:src="@drawable/ic_baseline_arrow_back" />
-
-            <ImageView
-                android:id="@+id/apps"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginStart="220dp"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/ic_baseline_apps" />
-
-            <ImageView
-                android:id="@+id/search_side_button"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/ic_baseline_search" />
-
-            <ImageView
-                android:id="@+id/more_button"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_marginEnd="16dp"
-                android:src="@drawable/ic_baseline_more_vert_white" />
-
-        </LinearLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        app:cardBackgroundColor="@color/telegramm_color"
-        app:cardElevation="0dp">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
-            android:layout_width="60dp"
-            android:layout_height="60dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            app:cardCornerRadius="100dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/back_button">
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardBackgroundColor="@color/telegramm_color"
+            app:cardElevation="0dp">
 
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/avatar_1" />
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/back_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:src="@drawable/ic_baseline_arrow_back"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+                <ImageView
+                    android:id="@+id/apps"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginStart="220dp"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_baseline_apps" />
+
+                <ImageView
+                    android:id="@+id/search_side_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_baseline_search" />
+
+                <ImageView
+                    android:id="@+id/more_button"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_baseline_more_vert_white" />
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            app:cardBackgroundColor="@color/telegramm_color"
+            app:cardElevation="0dp">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="100dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/back_button">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/avatar_1" />
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/full_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/user_name_text"
+                    android:textColor="@color/white"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:id="@+id/status_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:text="@string/status_user_text"
+                    android:textColor="#c0edff"
+                    android:textSize="14sp" />
+            </LinearLayout>
 
         </androidx.cardview.widget.CardView>
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/full_user_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/user_name_text"
-                android:textColor="@color/white"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/status_user"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom"
-                android:text="@string/status_user_text"
-                android:textColor="#c0edff"
-                android:textSize="14sp" />
-        </LinearLayout>
-
         <ImageButton
             android:id="@+id/add_photo_button"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
             android:layout_gravity="end"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="-36dp"
             android:layout_marginEnd="16dp"
             android:background="@drawable/round_button"
             android:src="@drawable/ic_baseline_add_a_photo_24"
             tools:ignore="SpeakableTextPresentCheck" />
-    </androidx.cardview.widget.CardView>
-
-    <TextView
-        android:id="@+id/info_account"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/account_text"
-        android:textColor="#7090a7"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/phone_info_point"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        app:cardElevation="0dp"
-        app:layout_constraintEnd_toEndOf="@id/content_end"
-        app:layout_constraintStart_toStartOf="@id/content_start"
-        app:layout_constraintTop_toBottomOf="@id/background_header">
 
         <TextView
-            android:id="@+id/phone_info"
-            android:layout_width="wrap_content"
+            android:id="@+id/info_account"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/phone_number_text"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="-16dp"
+            android:text="@string/account_text"
+            android:textColor="#7090a7"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/about_number"
-            android:layout_width="wrap_content"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/phone_info_point"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginTop="25dp"
-            android:layout_marginBottom="8dp"
-            android:text="@string/help_phone_text"
-            android:textColor="#747675"
-            android:textSize="14sp" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            app:cardElevation="0dp">
 
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="1dp"
-            android:layout_gravity="bottom"
-            android:background="@color/dark_grey" />
-    </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/phone_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phone_number_text"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/nickname_point"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        app:cardElevation="0dp"
-        app:layout_constraintEnd_toEndOf="@id/content_end"
-        app:layout_constraintStart_toStartOf="@id/content_start"
-        app:layout_constraintTop_toBottomOf="@id/phone_info_point">
+            <TextView
+                android:id="@+id/about_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/help_phone_text"
+                android:textColor="#747675"
+                android:textSize="14sp" />
 
-        <TextView
-            android:id="@+id/id_username"
-            android:layout_width="wrap_content"
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="@color/dark_grey" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/nickname_point"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/nickname_text"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:cardElevation="0dp">
 
-        <TextView
-            android:id="@+id/help_username"
-            android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/id_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nickname_text"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/help_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/help_nickname_text"
+                android:textColor="#747675"
+                android:textSize="14sp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="@color/dark_grey" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/status_point"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="bottom"
-            android:layout_marginTop="25dp"
-            android:layout_marginBottom="8dp"
-            android:text="@string/help_nickname_text"
-            android:textColor="#747675"
-            android:textSize="14sp" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:cardElevation="0dp">
 
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="1dp"
-            android:layout_gravity="bottom"
-            android:background="@color/dark_grey" />
-    </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/status_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quote_text"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/status_point"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        app:cardElevation="0dp"
-        app:layout_constraintEnd_toEndOf="@id/nickname_point"
-        app:layout_constraintStart_toStartOf="@id/content_start"
-        app:layout_constraintTop_toBottomOf="@id/nickname_point">
-
-        <TextView
-            android:id="@+id/status_username"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/quote_text"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
-
-        <TextView
-            android:id="@+id/bio_username"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
-            android:layout_marginBottom="8dp"
-            android:text="@string/bio_text"
-            android:textColor="#747675"
-            android:textSize="14sp" />
-    </androidx.cardview.widget.CardView>
-
-    <ImageView
-        android:id="@+id/grey_border"
-        android:layout_width="match_parent"
-        android:layout_height="10dp"
-        android:background="#f0f0f0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/status_point" />
-
-    <TextView
-        android:id="@+id/settings"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:text="@string/settings_text"
-        android:textColor="#7090a7"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/grey_border" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/notification_and_sounds_point"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:focusable="true"
-        app:cardElevation="0dp"
-        app:layout_constraintEnd_toEndOf="@id/content_end"
-        app:layout_constraintStart_toStartOf="@id/content_start"
-        app:layout_constraintTop_toBottomOf="@id/grey_border">
+            <TextView
+                android:id="@+id/bio_username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/bio_text"
+                android:textColor="#747675"
+                android:textSize="14sp" />
+        </androidx.cardview.widget.CardView>
 
         <ImageView
-            android:id="@+id/notification_button"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:src="@drawable/ic_baseline_notifications_none" />
+            android:id="@+id/grey_border"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:background="#f0f0f0" />
 
         <TextView
-            android:id="@+id/notification_tv"
+            android:id="@+id/settings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:layout_marginBottom="16dp"
-            android:text="@string/notifications_and_sounds_text"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
-    </androidx.cardview.widget.CardView>
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/settings_text"
+            android:textColor="#7090a7"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/privacy_security_point"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        app:cardElevation="0dp"
-        app:layout_constraintEnd_toEndOf="@id/content_end"
-        app:layout_constraintStart_toStartOf="@id/content_start"
-        app:layout_constraintTop_toBottomOf="@id/notification_and_sounds_point">
-
-        <ImageView
-            android:id="@+id/lock_button"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:src="@drawable/ic_baseline_lock_24" />
-
-        <TextView
-            android:id="@+id/lock_tv"
-            android:layout_width="wrap_content"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/notification_and_sounds_point"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:layout_marginBottom="16dp"
-            android:text="@string/privacy_and_security_text"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:focusable="true"
+            app:cardElevation="0dp">
 
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="1dp"
-            android:layout_gravity="bottom"
-            android:background="@color/dark_grey" />
-    </androidx.cardview.widget.CardView>
+            <ImageView
+                android:id="@+id/notification_button"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_baseline_notifications_none" />
 
+            <TextView
+                android:id="@+id/notification_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/notifications_and_sounds_text"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </androidx.cardview.widget.CardView>
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/data_storage_point"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        app:cardElevation="0dp"
-        app:layout_constraintEnd_toEndOf="@id/content_end"
-        app:layout_constraintStart_toStartOf="@id/content_start"
-        app:layout_constraintTop_toBottomOf="@id/privacy_security_point">
-
-        <ImageView
-            android:id="@+id/time_button"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:src="@drawable/ic_baseline_access_time_24" />
-
-        <TextView
-            android:id="@+id/time_tv"
-            android:layout_width="wrap_content"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/privacy_security_point"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:layout_marginBottom="16dp"
-            android:text="@string/data_and_storage_text"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
-    </androidx.cardview.widget.CardView>
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:cardElevation="0dp">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/chat_settings_point"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        app:cardElevation="0dp"
-        app:layout_constraintEnd_toEndOf="@id/content_end"
-        app:layout_constraintStart_toStartOf="@id/content_start"
-        app:layout_constraintTop_toBottomOf="@id/data_storage_point">
+            <ImageView
+                android:id="@+id/lock_button"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_baseline_lock_24" />
 
-        <ImageView
-            android:id="@+id/chat_button"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:src="@drawable/ic_baseline_chat_bubble_outline_24" />
+            <TextView
+                android:id="@+id/lock_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/privacy_and_security_text"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/chat_tv"
-            android:layout_width="wrap_content"
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="@color/dark_grey" />
+        </androidx.cardview.widget.CardView>
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/data_storage_point"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:layout_marginBottom="16dp"
-            android:text="@string/chat_settings_text"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:cardElevation="0dp">
 
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="1dp"
-            android:layout_gravity="bottom"
-            android:background="@color/dark_grey" />
-    </androidx.cardview.widget.CardView>
+            <ImageView
+                android:id="@+id/time_button"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_baseline_access_time_24" />
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/folders_point"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        app:cardElevation="0dp"
-        app:layout_constraintEnd_toEndOf="@id/content_end"
-        app:layout_constraintStart_toStartOf="@id/content_start"
-        app:layout_constraintTop_toBottomOf="@id/chat_settings_point">
+            <TextView
+                android:id="@+id/time_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/data_and_storage_text"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </androidx.cardview.widget.CardView>
 
-        <ImageView
-            android:id="@+id/folder_button"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:src="@drawable/ic_baseline_folder_open_24" />
-
-        <TextView
-            android:id="@+id/folder_tv"
-            android:layout_width="wrap_content"
+        <androidx.cardview.widget.CardView
+            android:id="@+id/chat_settings_point"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:layout_marginBottom="16dp"
-            android:text="@string/chat_folders_text"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
-    </androidx.cardview.widget.CardView>
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:cardElevation="0dp">
 
-    <androidx.cardview.widget.CardView
-        android:id="@+id/devices_point"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
-        app:cardElevation="0dp"
-        app:layout_constraintEnd_toEndOf="@id/content_end"
-        app:layout_constraintStart_toStartOf="@id/content_start"
-        app:layout_constraintTop_toBottomOf="@id/folders_point">
+            <ImageView
+                android:id="@+id/chat_button"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_baseline_chat_bubble_outline_24" />
 
-        <ImageView
-            android:id="@+id/devices_button"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:src="@drawable/ic_baseline_devices_24" />
+            <TextView
+                android:id="@+id/chat_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/chat_settings_text"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
 
-        <TextView
-            android:id="@+id/devices_tv"
-            android:layout_width="wrap_content"
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="@color/dark_grey" />
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/folders_point"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="48dp"
-            android:layout_marginBottom="16dp"
-            android:text="@string/devices_text"
-            android:textColor="@color/black"
-            android:textSize="18sp" />
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:cardElevation="0dp">
 
-        <View
-            android:layout_width="wrap_content"
-            android:layout_height="1dp"
-            android:layout_gravity="bottom"
-            android:background="@color/dark_grey" />
+            <ImageView
+                android:id="@+id/folder_button"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_baseline_folder_open_24" />
 
-    </androidx.cardview.widget.CardView>
+            <TextView
+                android:id="@+id/folder_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/chat_folders_text"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </androidx.cardview.widget.CardView>
 
-</androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/devices_point"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            app:cardElevation="0dp">
+
+            <ImageView
+                android:id="@+id/devices_button"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_baseline_devices_24" />
+
+            <TextView
+                android:id="@+id/devices_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="48dp"
+                android:layout_marginBottom="16dp"
+                android:text="@string/devices_text"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <View
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_gravity="bottom"
+                android:background="@color/dark_grey" />
+
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+</RelativeLayout>

@@ -12,7 +12,9 @@ import com.example.layoutpackages.databinding.FragmentAudioPlayerCLBinding
 
 
 class AudioPlayerCL : Fragment() {
+
     lateinit var binding: FragmentAudioPlayerCLBinding
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -34,5 +36,6 @@ class AudioPlayerCL : Fragment() {
         }
         requireActivity().onBackPressedDispatcher.addCallback(callback)
     }
+
 
 }
