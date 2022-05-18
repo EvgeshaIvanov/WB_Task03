@@ -21,17 +21,17 @@ class TestTimeLayouts {
 
     fun test() {
 
-        Log.i("time", "constraint facebook : ${getLayoutTimeInSec(R.layout.fragment_facebook_c_l)} sec")
-        Log.i("time", "linear facebook: ${getLayoutTimeInSec(R.layout.fragment_facebook)} sec")
+        Log.i("time", "constraint facebook : ${getLayoutTime(R.layout.fragment_facebook_c_l)} milliseconds")
+        Log.i("time", "linear facebook: ${getLayoutTime(R.layout.fragment_facebook)} milliseconds")
 
-        Log.i("time", "constraint audio player : ${getLayoutTimeInSec(R.layout.fragment_audio_player_c_l)} sec")
-        Log.i("time", "linear audio player: ${getLayoutTimeInSec(R.layout.fragment_audio_player)} sec")
+        Log.i("time", "constraint audio player : ${getLayoutTime(R.layout.fragment_audio_player_c_l)} milliseconds")
+        Log.i("time", "linear audio player: ${getLayoutTime(R.layout.fragment_audio_player)} milliseconds")
 
-        Log.i("time", "constraint telegramm : ${getLayoutTimeInSec(R.layout.fragment_telegramm_profile_c_l)} sec")
-        Log.i("time", "linear telegramm: ${getLayoutTimeInSec(R.layout.fragment_telegramm_profile)} sec")
+        Log.i("time", "constraint telegramm : ${getLayoutTime(R.layout.fragment_telegramm_profile_c_l)} milliseconds")
+        Log.i("time", "linear telegramm: ${getLayoutTime(R.layout.fragment_telegramm_profile)} milliseconds")
 
-        Log.i("time", "constraint calculator : ${getLayoutTimeInSec(R.layout.fragment_calculator_c_l)} sec")
-        Log.i("time", "linear calculator: ${getLayoutTimeInSec(R.layout.fragment_calculator)} sec")
+        Log.i("time", "constraint calculator : ${getLayoutTime(R.layout.fragment_calculator_c_l)} milliseconds")
+        Log.i("time", "linear calculator: ${getLayoutTime(R.layout.fragment_calculator)} milliseconds")
 
     }
     private fun getLayoutTimeInSec(@LayoutRes layoutRes: Int): Long{
